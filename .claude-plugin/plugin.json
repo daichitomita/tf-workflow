@@ -3,7 +3,7 @@
   "description": "Terraform/Terragrunt workflow safety hooks for Claude Code. Ensures AWS credentials are configured before running infrastructure commands.",
   "version": "1.0.1",
   "author": {
-    "name": "tomitadaichi"
+    "name": "daichitomita"
   },
   "license": "MIT",
   "keywords": ["terraform", "terragrunt", "aws", "infrastructure", "hooks"]
