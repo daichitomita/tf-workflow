@@ -7,7 +7,7 @@ Ensures AWS credentials are configured before running `terraform` or `terragrunt
 ## Installation
 
 ```
-/plugin marketplace add tomitadaichi/tf-workflow
+/plugin marketplace add daichitomita/tf-workflow
 ```
 
 ## What it does
