@@ -2,7 +2,7 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "tool == \"Bash\" && tool_input.command matches \"(terraform|terragrunt)\"",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",

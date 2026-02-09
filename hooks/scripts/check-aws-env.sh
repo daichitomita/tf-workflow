@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# stdin から tool_input を読み取り、terraform/terragrunt コマンドかどうか判定
+COMMAND=$(jq -r '.tool_input.command // ""' < /dev/stdin)
+
+if ! echo "$COMMAND" | grep -qE '(terraform|terragrunt)'; then
+  # terraform/terragrunt 以外のコマンドはスキップ
+  exit 0
+fi
+
 # AWS認証情報のチェック
-# matcher で terraform/terragrunt コマンドのフィルタリング済み
 if [ -n "$AWS_PROFILE" ]; then
   exit 0
 elif [ -n "$AWS_ACCESS_KEY_ID" ] && [ -n "$AWS_SECRET_ACCESS_KEY" ]; then
